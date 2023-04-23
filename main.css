@@ -1,0 +1,120 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: monospace;
+	background: linear-gradient(rgb(226, 156, 226),rgb(135, 183, 224));
+	width: 100%;
+	min-height: 100vh;
+}
+.main-container{
+	width: 100%;
+	max-width: 50%;
+	background-color: aliceblue;
+	margin: 100px auto 50px;
+	padding: 30px;
+	border-radius: 24px;
+}
+.main-container #title{
+	color: rgba(1, 1, 31, 0.815);
+}
+
+#input-field{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#input-field #input-box{
+	font-size: large;
+	font-family: inherit;
+	flex: 1;
+	width: 75%;
+	margin: 3em;
+	padding: .4em 0 .4em 1em;
+	/* border: 1px solid rgb(226, 156, 226); */
+	border: none;
+	box-shadow: 0px 0px 4px 0px rgb(226, 156, 226);
+	background-color: rgba(192, 217, 238, 0.356);
+	border-radius: 10px;
+	outline: none;
+}
+#input-field #add-btn{
+	cursor: pointer;
+	font-size: large;
+	font-family: inherit;
+	padding:.3em 1em;
+	background-color: rgba(192, 217, 238, 0.356);
+	box-shadow: 0px 0px 4px 0px rgb(226, 156, 226);
+	border: none;
+	/* border: 1px solid rgb(226, 156, 226); */
+	border-radius: 10px;
+}
+
+#list-container li{
+	margin-top: .2em;
+	user-select: none;
+	font-size: 16px;
+	list-style: none;
+	width: 90%;
+	border-radius: 9px;
+	padding: .4em 2em;
+	background-color: rgba(226, 156, 226, 0.521);
+	position: relative;
+}
+
+#list-container li::before{
+	background-image: url(imgs/images/unchecked.png);
+	background-position: center;
+	background-size: cover;
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border: 1px solid;
+	border-radius: 50%;
+	left: 4px;
+	top: 5px;
+}
+
+#list-container li.checked{
+	color: #555;
+	text-decoration: line-through;
+	background-color: rgba(226, 156, 226, 0.267);
+}
+
+#list-container li.checked::before{
+	background-image: url(imgs/images/checked.png);
+}
+
+#list-container li button{
+	position: absolute;
+	right: 4px;
+	top: 6px;
+	width: 20px;
+	height: 20px;
+	font-size: 15px;
+	color: #555;
+	text-align: center;
+	border: none;
+	border-radius: 50%;
+}
+#list-container li button:hover{
+	background-color: #5c6469;
+	color: red;
+}
+
+#reset-btn{
+	margin: .2em;
+	color: rgba(255, 0, 0, 0.555);
+	cursor: pointer;
+	font-size: large;
+	font-family: inherit;
+	padding:.3em 1em;
+	background-color: transparent;
+	border: 1px double;
+	/* border: 1px solid rgb(226, 156, 226); */
+	border-radius: 10px;
+}
